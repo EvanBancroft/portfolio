@@ -1,0 +1,13 @@
+export const PALETTE = {
+  BLACK: '#000',
+  PURPLE: '#5D39E7',
+  WHITE: '#ffffff',
+}
+
+export const COLOR = {
+  BASE_ACCENT: PALETTE.PURPLE,
+  BASE_BACKGROUND: PALETTE.WHITE,
+  BASE_FONT: PALETTE.BLACK,
+  LINK_FONT: PALETTE.BLACK,
+  ...PALETTE,
+}
