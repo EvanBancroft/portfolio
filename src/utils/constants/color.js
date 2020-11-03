@@ -1,7 +1,7 @@
 export const PALETTE = {
-  BLACK: '#000',
-  PURPLE: '#5D39E7',
-  WHITE: '#ffffff',
+  DARK_GREY: '#2C2F2E',
+  ORANGE: '#D65727',
+  LIGHT_GREY: '#909191',
 }
 
 export const COLOR = {

@@ -16,7 +16,7 @@ module.exports = {
           '@icons': 'src/assets/icons',
           '@molecules': 'src/components/molecules',
           '@organisms': 'src/components/organisms',
-          '@theme': 'src/theme',
+          '@themes': 'src/utils/theme',
         },
         extensions: ['js'],
       },
