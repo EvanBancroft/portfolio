@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Riff Gatsby Starter`,
-    description: `Starter`,
-    author: `@riff_creative`,
+    title: `Evan Bancroft`,
+    description: `Evan Bancroft is a front end developer located in the Pacific Northwest. He currently works at Riff_ on static sites primarily utilizing React and Gatsby.`,
+    author: `@evan.bancroft`,
   },
   plugins: [
     {
@@ -35,10 +35,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `riff-gatsby-starter`,
-        short_name: `Starter`,
+        name: `Evan Bancroft Portfolio`,
+        description: `Evan Bancroft is a front end developer located in the Pacific Northwest. He currently works at Riff_ on static sites primarily utilizing React and Gatsby.`,
+        lang: `en`,
+        short_name: `Evan Bancroft`,
         start_url: `/`,
-        icon: `src/assets/images/favicon-512x512.jpg`,
+        icon: `src/assets/images/favicon.png`,
         display: `minimal-ui`,
       },
     },

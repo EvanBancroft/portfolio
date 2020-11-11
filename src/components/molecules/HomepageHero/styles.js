@@ -10,7 +10,7 @@ export const useStyles = createUseStyles({
       margin: '0 5%',
     },
     [MQ.TABLET_LARGE]: {
-      margin: 0,
+      margin: '0 7.3%',
     },
   },
   textBlock: {
@@ -22,14 +22,8 @@ export const useStyles = createUseStyles({
       margin: 0,
       lineHeight: 1,
       [MQ.TABLET]: {
-        fontSize: 57,
+        fontSize: '7vw',
         paddingTop: 40,
-      },
-      [MQ.DESKTOP]: {
-        fontSize: 90,
-      },
-      [MQ.DESKTOP_LARGE]: {
-        fontSize: 135,
       },
     },
     '& h2': {
@@ -64,10 +58,7 @@ export const useStyles = createUseStyles({
       width: '57%',
     },
     [MQ.TABLET_LARGE]: {
-      width: '63%',
-    },
-    [MQ.DESKTOP_LARGE]: {
-      width: '66%',
+      width: '62%',
     },
   },
 })
