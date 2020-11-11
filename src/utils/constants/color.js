@@ -2,6 +2,8 @@ export const PALETTE = {
   DARK_GREY: '#2C2F2E',
   ORANGE: '#D65727',
   LIGHT_GREY: '#909191',
+  LSW_ORANGE: '#D05539',
+  PURPLE: '#4D34DB',
 }
 
 export const COLOR = {
