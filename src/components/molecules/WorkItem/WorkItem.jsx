@@ -16,8 +16,8 @@ export const WorkItem = ({
   siteCopy,
   color,
   isEvenMobile,
-  isFourth,
   fullTitle,
+  i,
 }) => {
   const [isOpen, setIsOpen] = useState(false)
   const classes = useStyles({ color })
@@ -25,17 +25,19 @@ export const WorkItem = ({
   const worksTitleClasses = cn({
     [classes.worksTile]: true,
     [classes.worksTileEven]: isEvenMobile,
+    [classes.worksTile2]: i === 1,
+    [classes.worksTile3]: i === 2,
+    [classes.worksTile4]: i === 3,
   })
+  console.log(i)
   const modalClasses = cn({
     [classes.openModal]: isOpen,
   })
 
-  console.log(isOpen)
   useLockBodyScroll(isOpen)
 
   return (
     <>
-      {isFourth && <div className={classes.columnBreaker} />}
       <button className={worksTitleClasses} onClick={() => setIsOpen(true)}>
         <h3 className={classes.title}>{title}</h3>
         <Img fluid={smallFluid} alt={alt} />
@@ -52,13 +54,15 @@ export const WorkItem = ({
 
           <h4 className={classes.modalTitle}>{toUpper(fullTitle)} </h4>
           <Img fluid={smallFluid} alt={alt} className={classes.modalImage} />
-          <div className={classes.modalInfo}>
-            <h5 className={classes.modalTitle}>ABOUT</h5>
-            <p className={classes.aboutCopy}>{siteCopy}</p>
-          </div>
-          <div className={classes.modalInfo}>
-            <h5 className={classes.modalTitle}>LIVE SITE</h5>
-            <a href={siteLink}>{siteLinkPretty}</a>
+          <div className={classes.infoWrapper}>
+            <div className={classes.modalInfo}>
+              <h5 className={classes.modalTitle}>ABOUT</h5>
+              <p className={classes.aboutCopy}>{siteCopy}</p>
+            </div>
+            <div className={classes.modalInfo}>
+              <h5 className={classes.modalTitle}>LIVE SITE</h5>
+              <a href={siteLink}>{siteLinkPretty}</a>
+            </div>
           </div>
         </div>
       )}

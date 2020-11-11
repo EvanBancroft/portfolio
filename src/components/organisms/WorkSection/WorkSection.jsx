@@ -12,7 +12,7 @@ export const WorkSection = ({ data }) => {
       <h2 className={classes.header}>work</h2>
       <div className={classes.workGrid}>
         {data.map((item, i) => {
-          const isFourth = i % 4 === 0
+          const isFourth = (i + 1) % 4 === 0
           const isEvenMobile = isMobile && (i + 1) % 2 === 0
           return (
             <WorkItem

@@ -25,7 +25,7 @@ const IndexPage = () => {
     {
       smallFluid: images.lswSmall.childImageSharp.fluid,
       alt: 'LSW Architects Website',
-      title: 'LSW',
+      title: 'RIFF_',
       siteLink: 'https://lswarchitects.com/',
       siteLinkPretty: 'lswachitects.com',
       siteCopy:
@@ -36,23 +36,23 @@ const IndexPage = () => {
     {
       smallFluid: images.lswSmall.childImageSharp.fluid,
       alt: 'LSW Architects Website',
-      title: 'LSW',
+      title: 'JEEP',
       siteLink: 'https://lswarchitects.com/',
       siteLinkPretty: 'lswachitects.com',
       siteCopy:
         'Lorem ipsum dolor sit amet, consectetur  adipiscing elit, sed do eiusmod tempor incididuntut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ',
-      color: COLOR.PURPLE,
+      color: COLOR.GREEN,
       fullTitle: 'LSW Architects Site',
     },
     {
       smallFluid: images.lswSmall.childImageSharp.fluid,
       alt: 'LSW Architects Website',
-      title: 'LSW',
+      title: 'ELO',
       siteLink: 'https://lswarchitects.com/',
       siteLinkPretty: 'lswachitects.com',
       siteCopy:
         'Lorem ipsum dolor sit amet, consectetur  adipiscing elit, sed do eiusmod tempor incididuntut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ',
-      color: COLOR.PURPLE,
+      color: COLOR.RED,
       fullTitle: 'LSW Architects Site',
     },
   ]
@@ -60,6 +60,7 @@ const IndexPage = () => {
     <Layout>
       <Seo title="Home" />
       <HomepageHero />
+      {/* each work session can only house 4 submissions */}
       <WorkSection data={worksData} />
     </Layout>
   )

@@ -29,5 +29,16 @@ export const useStyles = createUseStyles({
   workGrid: {
     display: 'flex',
     flexDirection: 'column',
+    flexWrap: 'wrap',
+    [MQ.TABLET]: {
+      height: 710,
+    },
+    [MQ.DESKTOP]: {
+      height: 985,
+      marginTop: 100,
+    },
+    [MQ.DESKTOP_LARGE]: {
+      height: 1200,
+    },
   },
 })
