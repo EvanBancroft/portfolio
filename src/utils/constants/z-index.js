@@ -1,4 +1,5 @@
 export const Z_INDEX = {
+  CONTENT_BACKDROP: 5,
   CONTENT: 10,
   NAV: 100,
   MODAL_BACKGROUND: 110,
