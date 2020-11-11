@@ -29,7 +29,6 @@ export const WorkItem = ({
     [classes.worksTile3]: i === 2,
     [classes.worksTile4]: i === 3,
   })
-  console.log(i)
   const modalClasses = cn({
     [classes.openModal]: isOpen,
   })
