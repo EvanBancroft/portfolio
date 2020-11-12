@@ -9,7 +9,9 @@ export const WorkSection = ({ data }) => {
   const isMobile = useMedia('(max-width: 600px)')
   return (
     <div className={classes.worksWrapper}>
-      <h2 className={classes.header}>work</h2>
+      <h2 className={classes.header} id="work">
+        work
+      </h2>
       <div className={classes.workGrid}>
         {data.map((item, i) => {
           const isFourth = (i + 1) % 4 === 0
