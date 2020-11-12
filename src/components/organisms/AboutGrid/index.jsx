@@ -1,0 +1,1 @@
+export { AboutGrid } from './AboutGrid'

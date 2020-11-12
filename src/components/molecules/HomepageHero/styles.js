@@ -11,6 +11,7 @@ export const useStyles = createUseStyles({
     },
     [MQ.TABLET_LARGE]: {
       margin: '0 7.3%',
+      marginTop: 100,
     },
   },
   textBlock: {

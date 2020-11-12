@@ -1,0 +1,1 @@
+export { AboutGridItem } from './AboutGridItem'

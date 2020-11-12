@@ -1,6 +1,6 @@
 import { createUseStyles } from 'react-jss'
 
-import { MQ, Z_INDEX } from '@constants'
+import { MQ, Z_INDEX, COLOR } from '@constants'
 
 export const useStyles = createUseStyles({
   headerWrapper: {
@@ -134,5 +134,8 @@ export const useStyles = createUseStyles({
       width: 560,
       height: 650,
     },
+  },
+  active: {
+    color: `${COLOR.ORANGE} !important`,
   },
 })
