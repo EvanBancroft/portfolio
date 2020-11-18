@@ -12,7 +12,7 @@ const About = () => {
     {
       title: 'about',
       body:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
+        'Evan Bancroft is a web developer and content strategist based out of Southwest Washington. He is a recent graduate of Washington State University Vancouver with a B.A. in Digital Technology and Culture and a minor in Business Administration. Due to this broad degree, Evan is comfortable in a sizeable chunk of the Adobe Suite. In web development, Evan is focused on front-end development using a variety of languages. He specializes in React and Jamstack technologies such as Gatsby.',
       fluid: images.item1.childImageSharp.fluid,
       alt: 'Evan Bancroft sitting in his favorite IKEA chair',
       type: 'normal',
@@ -42,7 +42,7 @@ const About = () => {
       mail: 'hello@evanbancroft.com',
       number: '360-857-9555',
       fluid: images.item3.childImageSharp.fluid,
-      alt: 'Evan Bancroft and Ripley the Cairn Terrier',
+      alt: 'Evan Bancroft and Ripley the Terrible Cairn Terrier',
       type: 'contact',
       reverseMobile: true,
     },

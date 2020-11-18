@@ -75,6 +75,20 @@ export const useStyles = createUseStyles({
       fontSize: 40,
     },
   },
+  resumeLink: {
+    fontSize: 20,
+    fontFamily: 'neue-haas-grotesk-display, sans-serif',
+    fontWeight: 500,
+    textDecoration: 'underline',
+    color: COLOR.LIGHT_GREY,
+    [MQ.DESKTOP]: {
+      fontSize: 25,
+      margin: '20px 0',
+    },
+    [MQ.DESKTOP_LARGE]: {
+      fontSize: 35,
+    },
+  },
   mailLink: {
     fontSize: 25,
     fontFamily: 'neue-haas-grotesk-display, sans-serif',

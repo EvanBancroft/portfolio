@@ -10,6 +10,7 @@ export const useStyles = createUseStyles({
     border: 'none',
     outline: 'none',
     cursor: 'pointer',
+    padding: 0,
     [MQ.TABLET]: {
       width: '28%',
     },

@@ -13,6 +13,7 @@ module.exports = {
           '@constants': 'src/utils/constants',
           '@helpers': 'src/utils/helpers',
           '@images': 'src/assets/images',
+          '@pdf': 'src/assets/pdf',
           '@icons': 'src/assets/icons',
           '@molecules': 'src/components/molecules',
           '@organisms': 'src/components/organisms',
@@ -35,7 +36,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Evan Bancroft Portfolio`,
+        name: `Evan Bancroft's Portfolio`,
         description: `Evan Bancroft is a front end developer located in the Pacific Northwest. He currently works at Riff_ on static sites primarily utilizing React and Gatsby.`,
         lang: `en`,
         short_name: `Evan Bancroft`,

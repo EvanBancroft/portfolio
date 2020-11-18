@@ -7,7 +7,32 @@ export const Footer = () => {
 
   return (
     <div className={classes.footerWrapper}>
-      <div></div>
+      <div className={classes.copyrightWrapper}>
+        <p>&#169; 2020 Evan Bancroft </p>
+      </div>
+      <div className={classes.socialWrapper}>
+        <a
+          href="https://github.com/EvanBancroft/portfolio"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Site Repository
+        </a>
+        <a
+          href="https://github.com/EvanBancroft"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Github
+        </a>
+        <a
+          href="https://www.linkedin.com/in/evan-bancroft-b37909154/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          LinkedIn
+        </a>
+      </div>
     </div>
   )
 }
