@@ -3,6 +3,7 @@ module.exports = {
     title: `Evan Bancroft`,
     description: `Evan Bancroft is a front end developer located in the Pacific Northwest. He currently works at Riff_ on static sites primarily utilizing React and Gatsby.`,
     author: `@evan.bancroft`,
+    siteUrl: `https://www.evanbancroft.com`,
   },
   plugins: [
     {
@@ -22,6 +23,7 @@ module.exports = {
         extensions: ['js'],
       },
     },
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-jss`,
     `gatsby-plugin-react-helmet`,
     {
