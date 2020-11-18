@@ -56,9 +56,24 @@ const IndexPage = () => {
       fullTitle: 'ELO Website Rebuild Phase 1',
     },
   ]
+  const keywords = [
+    'Evan Bancroft',
+    'Portfolio',
+    'Software Developer',
+    'Software Engineer',
+    'Developer',
+    'Programmer',
+    'Gatsby',
+    'React',
+    'Jamstack',
+    'Riff',
+    'Content Strategy',
+    'Portland',
+    'Pacific Northwest',
+  ]
   return (
     <Layout>
-      <Seo title="Home" />
+      <Seo title="Home" keywords={keywords} />
       <HomepageHero />
       {/* each work session can only house 4 submissions */}
       <WorkSection data={worksData} />
