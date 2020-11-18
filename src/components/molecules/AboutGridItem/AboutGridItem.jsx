@@ -2,6 +2,7 @@ import React from 'react'
 import { useStyles } from './styles'
 import Img from 'gatsby-image'
 import { useMeasure } from 'react-use'
+import pdf from '@pdf/Evan-Bancroft-Resume.pdf'
 
 export const AboutGridItem = ({
   title,
@@ -26,15 +27,25 @@ export const AboutGridItem = ({
 
       case 'skills': {
         return (
-          <div className={classes.skillsWrapper}>
-            {body.map((item, i) => {
-              return (
-                <p key={i} className={classes.skillsBody} ref={skill}>
-                  {item}
-                </p>
-              )
-            })}
-          </div>
+          <>
+            <div className={classes.skillsWrapper}>
+              {body.map((item, i) => {
+                return (
+                  <p key={i} className={classes.skillsBody} ref={skill}>
+                    {item}
+                  </p>
+                )
+              })}
+            </div>
+            <a
+              href={pdf}
+              className={classes.resumeLink}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Evan Bancroft's Resume
+            </a>
+          </>
         )
       }
 

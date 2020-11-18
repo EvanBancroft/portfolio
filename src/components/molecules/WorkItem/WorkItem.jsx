@@ -60,7 +60,9 @@ export const WorkItem = ({
             </div>
             <div className={classes.modalInfo}>
               <h5 className={classes.modalTitle}>LIVE SITE</h5>
-              <a href={siteLink}>{siteLinkPretty}</a>
+              <a href={siteLink} target="_blank" rel="noreferrer">
+                {siteLinkPretty}
+              </a>
             </div>
           </div>
         </div>

@@ -58,16 +58,32 @@ export const Header = (props) => {
         <img src={menu} alt="Menu" className={circleClasses} />
       </button>
       <div className={menuClasses}>
-        <Link to={ROUTES.HOME} className={linkClasses1}>
+        <Link
+          to={ROUTES.HOME}
+          className={linkClasses1}
+          onClick={() => setIsOpen(false)}
+        >
           HOME
         </Link>
-        <a href="/#work" className={linkClasses2}>
+        <a
+          href="/#work"
+          className={linkClasses2}
+          onClick={() => setIsOpen(false)}
+        >
           WORK
         </a>
-        <Link to={ROUTES.ABOUT} className={linkClasses3}>
+        <Link
+          to={ROUTES.ABOUT}
+          className={linkClasses3}
+          onClick={() => setIsOpen(false)}
+        >
           ABOUT
         </Link>
-        <a href="/about#contact" className={linkClasses4}>
+        <a
+          href="/about#contact"
+          className={linkClasses4}
+          onClick={() => setIsOpen(false)}
+        >
           CONTACT
         </a>
       </div>
