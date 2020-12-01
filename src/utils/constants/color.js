@@ -6,6 +6,7 @@ export const PALETTE = {
   PURPLE: '#4D34DB',
   GREEN: '#4C8446',
   RED: '#FB0000',
+  ACCESS_GREY: '#a6a6a6',
 }
 
 export const COLOR = {

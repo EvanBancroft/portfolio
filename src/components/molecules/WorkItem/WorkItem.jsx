@@ -1,14 +1,16 @@
 import React, { useState } from 'react'
 import { useStyles } from './styles'
-import Img from 'gatsby-image'
 import cn from 'classnames'
-import { useLockBodyScroll } from 'react-use'
 import { toUpper } from 'ramda'
+import { useMedia, useLockBodyScroll, useScrollbarWidth } from 'react-use'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 import x from '@images/x.svg'
+import { Animated } from '@atoms'
 
 export const WorkItem = ({
   smallFluid,
+  modalImg,
   alt,
   title,
   siteLink,
@@ -20,7 +22,12 @@ export const WorkItem = ({
   i,
 }) => {
   const [isOpen, setIsOpen] = useState(false)
-  const classes = useStyles({ color })
+  const sbw = useScrollbarWidth()
+  const isNotMobile = useMedia('(min-width: 1280px)')
+  const small = getImage(smallFluid)
+  const modal = getImage(smallFluid)
+
+  const classes = useStyles({ color, sbw, isNotMobile, isOpen })
 
   const worksTitleClasses = cn({
     [classes.worksTile]: true,
@@ -33,39 +40,47 @@ export const WorkItem = ({
     [classes.openModal]: isOpen,
   })
 
-  useLockBodyScroll(isOpen)
+  useLockBodyScroll(isOpen && isNotMobile)
 
   return (
     <>
-      <button className={worksTitleClasses} onClick={() => setIsOpen(true)}>
-        <h3 className={classes.title}>{title}</h3>
-        <Img fluid={smallFluid} alt={alt} />
-      </button>
+      <Animated>
+        <button className={worksTitleClasses} onClick={() => setIsOpen(true)}>
+          <h3 className={classes.title}>{title}</h3>
+          <GatsbyImage image={small} alt={alt} />
+        </button>
+      </Animated>
 
       {isOpen && (
-        <div className={modalClasses}>
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className={classes.closeButton}
-          >
-            <img src={x} alt="Close Modal" />
-          </button>
+        <Animated>
+          <div className={modalClasses}>
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className={classes.closeButton}
+            >
+              <img src={x} alt="Close Modal" />
+            </button>
 
-          <h4 className={classes.modalTitle}>{toUpper(fullTitle)} </h4>
-          <Img fluid={smallFluid} alt={alt} className={classes.modalImage} />
-          <div className={classes.infoWrapper}>
-            <div className={classes.modalInfo}>
-              <h5 className={classes.modalTitle}>ABOUT</h5>
-              <p className={classes.aboutCopy}>{siteCopy}</p>
-            </div>
-            <div className={classes.modalInfo}>
-              <h5 className={classes.modalTitle}>LIVE SITE</h5>
-              <a href={siteLink} target="_blank" rel="noreferrer">
-                {siteLinkPretty}
-              </a>
+            <h4 className={classes.modalTitle}>{toUpper(fullTitle)} </h4>
+            <GatsbyImage
+              image={modal}
+              alt={alt}
+              className={classes.modalImage}
+            />
+            <div className={classes.infoWrapper}>
+              <div className={classes.modalInfo}>
+                <h5 className={classes.modalTitle}>ABOUT</h5>
+                <p className={classes.aboutCopy}>{siteCopy}</p>
+              </div>
+              <div className={classes.modalInfo}>
+                <h5 className={classes.modalTitle}>LIVE SITE</h5>
+                <a href={siteLink} target="_blank" rel="noreferrer">
+                  {siteLinkPretty}
+                </a>
+              </div>
             </div>
           </div>
-        </div>
+        </Animated>
       )}
     </>
   )

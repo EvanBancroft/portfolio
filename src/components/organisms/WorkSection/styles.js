@@ -31,14 +31,17 @@ export const useStyles = createUseStyles({
     flexDirection: 'column',
     flexWrap: 'wrap',
     [MQ.TABLET]: {
-      height: 710,
+      height: 730,
     },
     [MQ.DESKTOP]: {
-      height: 985,
+      height: 1050,
       marginTop: 100,
     },
     [MQ.DESKTOP_LARGE]: {
-      height: 1200,
+      height: 1500,
+    },
+    [MQ.DESKTOP_XL]: {
+      height: 1900,
     },
   },
 })

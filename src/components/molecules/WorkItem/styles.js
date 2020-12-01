@@ -48,6 +48,7 @@ export const useStyles = createUseStyles({
     width: '100vw',
     height: '100vh',
     overflowY: 'auto',
+    overflowX: 'hidden',
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
     top: 0,
     left: 0,
@@ -109,7 +110,7 @@ export const useStyles = createUseStyles({
       fontWeight: 500,
       textAlign: 'left',
       color: 'white',
-      paddingBottom: 50,
+      paddingBottom: 150,
       [MQ.DESKTOP]: {
         fontSize: 25,
       },
