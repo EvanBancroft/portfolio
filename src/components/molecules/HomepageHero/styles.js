@@ -30,7 +30,7 @@ export const useStyles = createUseStyles({
     '& h2': {
       fontFamily: 'neue-haas-grotesk-display, sans-serif',
       fontWeight: 600,
-      color: COLOR.LIGHT_GREY,
+      color: COLOR.ACCESS_GREY,
       fontSize: 23,
       margin: 0,
       [MQ.DESKTOP]: {

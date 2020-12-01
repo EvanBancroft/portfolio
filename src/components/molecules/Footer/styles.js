@@ -18,19 +18,28 @@ export const useStyles = createUseStyles({
     fontFamily: 'neue-haas-grotesk-display, sans-serif',
     fontWeight: 400,
     fontSize: 20,
-    color: COLOR.LIGHT_GREY,
+    color: COLOR.ACCESS_GREY,
+    paddingLeft: 20,
+    [MQ.TABLET]: {
+      paddingLeft: 0,
+    },
   },
   socialWrapper: {
+    display: 'flex',
+    alignItems: 'center',
     '& a': {
       fontFamily: 'neue-haas-grotesk-display, sans-serif',
       fontWeight: 400,
       fontSize: 20,
-      color: COLOR.LIGHT_GREY,
+      color: COLOR.ACCESS_GREY,
       marginLeft: 20,
       textDecoration: 'none',
     },
     '& a:first-child': {
       marginLeft: 20,
+      [MQ.TABLET]: {
+        marginLeft: 20,
+      },
     },
   },
 })

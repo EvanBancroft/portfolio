@@ -1,13 +1,16 @@
 import React from 'react'
 import { useStyles } from './styles'
-import Img from 'gatsby-image'
-import { graphql, useStaticQuery } from 'gatsby'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
-export const HomepageHero = () => {
+import { Animated } from '@atoms'
+
+export const HomepageHero = ({ image }) => {
   const classes = useStyles()
-  const images = useStaticQuery(heroImageQuery)
+  const imageData = getImage(image)
+
   return (
     <div className={classes.heroContainer}>
+      {/* <Animated type="fade-in"> */}
       <div className={classes.textBlock}>
         <h1>
           evan
@@ -19,21 +22,18 @@ export const HomepageHero = () => {
           web developer <br /> content strategy
         </h2>
       </div>
-      <Img
-        fluid={images.coding.childImageSharp.fluid}
-        className={classes.image}
-      />
+      {/* </Animated> */}
+      {/* <Animated type="fade-up-hero"> */}
+      <div className={classes.image}>
+        {/* <StaticImage
+
+          layout="fluid"
+          src="../../../assets/images/riff-staffportrait-evan-6.jpg"
+          alt="Evan Bancroft"
+        /> */}
+        <GatsbyImage image={imageData} alt="Evan Bancroft" />
+      </div>
+      {/* </Animated> */}
     </div>
   )
 }
-const heroImageQuery = graphql`
-  query {
-    coding: file(relativePath: { eq: "riff-staffportrait-evan-6.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 3600) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`

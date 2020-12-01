@@ -3,16 +3,15 @@ import React from 'react'
 import { Seo } from '@atoms'
 import { Layout, WorkSection } from '@organisms'
 import { HomepageHero } from '@molecules'
-import { useStaticQuery, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 
 import { COLOR } from '@constants'
 
-const IndexPage = () => {
-  const images = useStaticQuery(worksImagesQuery)
-
+const IndexPage = ({ data }) => {
   const worksData = [
     {
-      smallFluid: images.lsw.childImageSharp.fluid,
+      smallFluid: data.lswSmall,
+      modalImg: data.lsw,
       alt: 'LSW Architects Landing Page',
       title: 'LSW',
       siteLink: 'https://lswarchitects.com/',
@@ -23,7 +22,9 @@ const IndexPage = () => {
       fullTitle: 'LSW Architects Site',
     },
     {
-      smallFluid: images.riff.childImageSharp.fluid,
+      smallFluid: data.riffSmall,
+      modalImg: data.riff,
+
       alt: 'Riff Creative Landing Page',
       title: 'RIFF_',
       siteLink: 'https://riffcreativestudio.com/',
@@ -34,7 +35,9 @@ const IndexPage = () => {
       fullTitle: 'Riff Creative Website',
     },
     {
-      smallFluid: images.jeep.childImageSharp.fluid,
+      smallFluid: data.jeepSmall,
+      modalImg: data.jeep,
+
       alt: 'Jeep Case Study',
       title: 'JEEP',
       siteLink: 'https://tinyurl.com/jeepsocial',
@@ -45,7 +48,9 @@ const IndexPage = () => {
       fullTitle: 'JEEP Super Bowl Case Study',
     },
     {
-      smallFluid: images.elo.childImageSharp.fluid,
+      smallFluid: data.eloSmall,
+      modalImg: data.elo,
+
       alt: 'Electronic Literature Organization Website Prototype',
       title: 'ELO',
       siteLink: 'https://elo-website.org/',
@@ -74,7 +79,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <Seo title="Home" keywords={keywords} />
-      <HomepageHero />
+      <HomepageHero image={data.hero} />
       {/* each work session can only house 4 submissions */}
       <WorkSection data={worksData} />
     </Layout>
@@ -82,34 +87,51 @@ const IndexPage = () => {
 }
 export default IndexPage
 
-const worksImagesQuery = graphql`
+export const query = graphql`
   query {
+    hero: file(relativePath: { eq: "Evan Bancroft Homepage.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FLUID)
+      }
+    }
     lsw: file(relativePath: { eq: "lsw-site.png" }) {
       childImageSharp {
-        fluid(maxWidth: 3600) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(layout: FLUID)
       }
     }
     riff: file(relativePath: { eq: "riff-site.png" }) {
       childImageSharp {
-        fluid(maxWidth: 3600) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(layout: FLUID)
       }
     }
     jeep: file(relativePath: { eq: "jeep-case.png" }) {
       childImageSharp {
-        fluid(maxWidth: 3600) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(layout: FLUID)
       }
     }
     elo: file(relativePath: { eq: "elo-proto.png" }) {
       childImageSharp {
-        fluid(maxWidth: 3600) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(layout: FLUID)
+      }
+    }
+    lswSmall: file(relativePath: { eq: "lsw-small.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FLUID)
+      }
+    }
+    riffSmall: file(relativePath: { eq: "riff-small.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FLUID)
+      }
+    }
+    jeepSmall: file(relativePath: { eq: "jeep-small.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FLUID)
+      }
+    }
+    eloSmall: file(relativePath: { eq: "elo-small.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FLUID)
       }
     }
   }
