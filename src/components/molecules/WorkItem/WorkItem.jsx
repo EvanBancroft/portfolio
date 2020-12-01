@@ -44,12 +44,12 @@ export const WorkItem = ({
 
   return (
     <>
-      {/* <Animated> */}
-      <button className={worksTitleClasses} onClick={() => setIsOpen(true)}>
-        <h3 className={classes.title}>{title}</h3>
-        <GatsbyImage image={small} alt={alt} />
-      </button>
-      {/* </Animated> */}
+      <Animated>
+        <button className={worksTitleClasses} onClick={() => setIsOpen(true)}>
+          <h3 className={classes.title}>{title}</h3>
+          <GatsbyImage image={small} alt={alt} />
+        </button>
+      </Animated>
 
       {isOpen && (
         <Animated>
