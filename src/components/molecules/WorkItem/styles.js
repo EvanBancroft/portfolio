@@ -68,6 +68,7 @@ export const useStyles = createUseStyles({
     fontSize: 30,
     marginTop: 80,
     textAlign: 'center',
+    cursor: 'pointer',
     [MQ.TABLET]: {
       textAlign: 'left',
       marginLeft: '15%',

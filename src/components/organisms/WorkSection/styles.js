@@ -31,10 +31,13 @@ export const useStyles = createUseStyles({
     flexDirection: 'column',
     flexWrap: 'wrap',
     [MQ.TABLET]: {
-      height: 730,
+      height: 600,
+    },
+    [`@media (min-width: 760px)`]: {
+      height: 780,
     },
     [MQ.DESKTOP]: {
-      height: 1050,
+      height: 1150,
       marginTop: 100,
     },
     [MQ.DESKTOP_LARGE]: {
