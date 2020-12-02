@@ -1,8 +1,10 @@
 import React from 'react'
 import { useStyles } from './styles'
-import Img from 'gatsby-image'
 import { useMeasure } from 'react-use'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+
 import pdf from '@pdf/Evan-Bancroft-Resume.pdf'
+import { Animated } from '@atoms'
 
 export const AboutGridItem = ({
   title,
@@ -18,6 +20,7 @@ export const AboutGridItem = ({
   const [skill, { height }] = useMeasure()
   const columnHeight = height * 5 + 250
   const classes = useStyles({ reverse, reverseMobile, columnHeight })
+  const image = getImage(fluid)
 
   const chooseBody = () => {
     switch (type) {
@@ -70,12 +73,14 @@ export const AboutGridItem = ({
     }
   }
   return (
-    <div className={classes.itemWrapper}>
-      <Img fluid={fluid} className={classes.image} alt={alt} />
-      <div className={classes.textBlock}>
-        <h1 className={classes.title}>{title}</h1>
-        {chooseBody()}
+    <Animated type="fade-in">
+      <div className={classes.itemWrapper}>
+        <GatsbyImage image={image} className={classes.image} alt={alt} />
+        <div className={classes.textBlock}>
+          <h1 className={classes.title}>{title}</h1>
+          {chooseBody()}
+        </div>
       </div>
-    </div>
+    </Animated>
   )
 }
