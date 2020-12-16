@@ -48,6 +48,9 @@ export const WorkItem = ({
         <button className={worksTitleClasses} onClick={() => setIsOpen(true)}>
           <h3 className={classes.title}>{title}</h3>
           <GatsbyImage image={small} alt={alt} />
+          <p className={classes.seo}>{siteCopy}</p>
+          <p className={classes.seo}>{title}</p>
+          <p className={classes.seo}>{fullTitle}</p>
         </button>
       </Animated>
 
