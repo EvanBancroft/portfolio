@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Evan Bancroft`,
     description: `Evan Bancroft is a front end developer located in the Pacific Northwest. He currently works at Riff_ on static sites primarily utilizing React and Gatsby.`,
-    author: `@evan.bancroft`,
+    author: `Evan Bancroft`,
     siteUrl: `https://www.evanbancroft.com`,
   },
   plugins: [

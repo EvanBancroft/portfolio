@@ -203,4 +203,8 @@ export const useStyles = createUseStyles({
       marginTop: 200,
     },
   },
+  seo: {
+    position: 'absolute',
+    left: '1000%',
+  },
 })
