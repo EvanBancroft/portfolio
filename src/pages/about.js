@@ -58,17 +58,17 @@ export const query = graphql`
   query {
     item1: file(relativePath: { eq: "Evan Bancroft.jpg" }) {
       childImageSharp {
-        gatsbyImageData(layout: FLUID)
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
     item2: file(relativePath: { eq: "coding.jpg" }) {
       childImageSharp {
-        gatsbyImageData(layout: FLUID)
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
     item3: file(relativePath: { eq: "Ripley.jpg" }) {
       childImageSharp {
-        gatsbyImageData(layout: FLUID)
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
   }
