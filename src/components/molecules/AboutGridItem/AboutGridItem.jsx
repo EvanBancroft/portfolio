@@ -3,7 +3,6 @@ import { useStyles } from './styles'
 import { useMeasure } from 'react-use'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
-import pdf from '@pdf/Evan-Bancroft-Resume.pdf'
 import { Animated } from '@atoms'
 
 export const AboutGridItem = ({
@@ -40,14 +39,14 @@ export const AboutGridItem = ({
                 )
               })}
             </div>
-            <a
+            {/* <a
               href={pdf}
               className={classes.resumeLink}
               target="_blank"
               rel="noreferrer"
             >
               Evan Bancroft's Resume
-            </a>
+            </a> */}
           </>
         )
       }

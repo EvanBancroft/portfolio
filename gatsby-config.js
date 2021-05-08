@@ -1,4 +1,24 @@
+require(`dotenv`).config()
+
+const conditionalConfig = []
+if (process.env.CONTEXT === 'production') {
+  conditionalConfig.push({
+    resolve: `gatsby-plugin-google-gtag`,
+    options: {
+      trackingIds: [
+        process.env.GOOGLE_ANALYTICS, // Google Analytics / GA
+      ],
+    },
+  })
+}
+
 module.exports = {
+  flags: {
+    FAST_DEV: true,
+    DEV_SSR: true,
+    PRESERVE_WEBPACK_CACHE: true,
+    PRESERVE_FILE_DOWNLOAD_CACHE: true,
+  },
   siteMetadata: {
     title: `Evan Bancroft`,
     description: `Evan Bancroft is a front end developer located in the Pacific Northwest. He currently works at Riff_ on static sites primarily utilizing React and Gatsby.`,
@@ -49,6 +69,21 @@ module.exports = {
         start_url: `/`,
         icon: `src/assets/images/favicon.png`,
         display: `minimal-ui`,
+      },
+    },
+    `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-omni-font-loader`,
+      options: {
+        mode: `async`,
+        enableListener: true,
+        preconnect: [`https://p.typekit.net`],
+        web: [
+          {
+            name: `neue-haas-grotesk-display`,
+            file: `https://use.typekit.net/jtm3lxn.css`,
+          },
+        ],
       },
     },
   ],
