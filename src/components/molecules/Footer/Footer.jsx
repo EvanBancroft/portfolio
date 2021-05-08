@@ -8,7 +8,7 @@ export const Footer = () => {
   return (
     <div className={classes.footerWrapper}>
       <div className={classes.copyrightWrapper}>
-        <p>&#169; 2020 Evan Bancroft </p>
+        <p>&#169; 2021 Evan Bancroft </p>
       </div>
       <div className={classes.socialWrapper}>
         <a

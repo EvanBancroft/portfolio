@@ -91,47 +91,47 @@ export const query = graphql`
   query {
     hero: file(relativePath: { eq: "Evan Bancroft Homepage.jpg" }) {
       childImageSharp {
-        gatsbyImageData(layout: FLUID)
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
     lsw: file(relativePath: { eq: "lsw-site.png" }) {
       childImageSharp {
-        gatsbyImageData(layout: FLUID)
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
     riff: file(relativePath: { eq: "riff-site.png" }) {
       childImageSharp {
-        gatsbyImageData(layout: FLUID)
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
     jeep: file(relativePath: { eq: "jeep-case.png" }) {
       childImageSharp {
-        gatsbyImageData(layout: FLUID)
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
     elo: file(relativePath: { eq: "elo-proto.png" }) {
       childImageSharp {
-        gatsbyImageData(layout: FLUID)
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
     lswSmall: file(relativePath: { eq: "lsw-small.jpg" }) {
       childImageSharp {
-        gatsbyImageData(layout: FLUID)
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
     riffSmall: file(relativePath: { eq: "riff-small.jpg" }) {
       childImageSharp {
-        gatsbyImageData(layout: FLUID)
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
     jeepSmall: file(relativePath: { eq: "jeep-small.jpg" }) {
       childImageSharp {
-        gatsbyImageData(layout: FLUID)
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
     eloSmall: file(relativePath: { eq: "elo-small.jpg" }) {
       childImageSharp {
-        gatsbyImageData(layout: FLUID)
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
   }
