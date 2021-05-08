@@ -7,7 +7,6 @@ import { useMedia } from 'react-use'
 export const Animated = ({ children, type, start }) => {
   const classes = useStyles()
   const refs = useRef([])
-  const tl = useRef()
   const isTablet = useMedia('(min-width: 768px)')
   gsap.registerPlugin(ScrollTrigger)
   useEffect(() => {
