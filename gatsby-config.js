@@ -26,6 +26,7 @@ module.exports = {
     siteUrl: `https://www.evanbancroft.com`,
   },
   plugins: [
+    ...conditionalConfig,
     {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
